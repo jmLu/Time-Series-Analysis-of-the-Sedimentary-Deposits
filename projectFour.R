@@ -1,12 +1,11 @@
 # title: "Prediction of the thickness of the sedimentary value"
-# author: "Jingmei Lu"
 # date: "May, 2014"
 
 #load package
 library(tseries)
 
 # load data
-sedimentary <- read.table("D:\\SJSU\\Math265\\project\\data\\deposits.txt")
+sedimentary <- read.table("D:data\\deposits.txt")
 head(sedimentary)
 dim(sedimentary)
 sedimentary <- sedimentary$V1
@@ -75,7 +74,6 @@ fit.6 <- arima(train, order = c(2,1,1))
 fit.7 <- arima(train, order = c(3,1,3))
 fit.8 <- arima(train, order = c(5,1,1))
 fit.9 <- arima(train, order = c(6,1,3))
-fit.auto <- auto.arima(log(sedimentary))
 # by reviewing significance of estimated coefficients of all models, 
 # only estimated coefficients of arima(0, 1, 2), arima(1,1,1) are all significant.
 
