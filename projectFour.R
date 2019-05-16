@@ -5,7 +5,7 @@
 library(tseries)
 
 # load data
-sedimentary <- read.table("D:data\\deposits.txt")
+sedimentary <- read.table("D:\\data\\deposits.txt")
 head(sedimentary)
 dim(sedimentary)
 sedimentary <- sedimentary$V1
